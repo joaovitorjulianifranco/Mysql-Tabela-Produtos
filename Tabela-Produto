@@ -1,0 +1,33 @@
+create database produto; 
+
+create table Tb_Produtos (
+Nome_Produto varchar(30) not null,
+Id_Pedido int,
+Id_Produto int, 
+Preço float,
+Quantidade float
+);
+
+select * from tb_produtos;
+
+insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa de Vídeo MSI NVIDIA GeForce RTX 2060', '73497142', '2222234', '1600.99', '78');
+insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('GTX 1050 2GB, GDDR5, Gigabyte', '78487182', '2728234', '720.80', '40');
+insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('SSD 480 GB Kingston', '68586193', '3679271', '225.20', '49'); 
+insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe MSI PRO B660M-A, LGA 1700', '79787193', '4779221', '899.50', '8');
+insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Processador Intel Core i9-12900KS, 3.4GHz ', '78384199', '7499527', '4450.99', '28');
+insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Processador Intel Core i9-13900K, 13ª Geração, 5.8GHz Max Turbo', '98989197', '7348526', '4700.99', '30');
+
+drop table tb_produtos; 
+
+select sum(Preço) as "Total Preço" from tb_produtos;
+	
+select sum(Preço) from tb_produtos;
+
+select avg(Preço) from tb_produtos;
+
+select max(Preço) from tb_produtos; 
+
+select count(Quantidade*Preço) from tb_produtos; 
+
+select sum(Quantidade * Preço) from tb_produtos where Preço;
+
