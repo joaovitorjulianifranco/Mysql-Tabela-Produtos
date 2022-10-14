@@ -29,5 +29,8 @@ select max(Preço) from tb_produtos;
 
 select count(Quantidade*Preço) from tb_produtos; 
 
-select sum(Quantidade * Preço) from tb_produtos where Preço;
+select sum(Quantidade * Preço) from tb_produtos where Preço; 
 
+select Nome_Produto, format(Preço, 4) 
+	from tb_pedido 
+    where Preço > 150;
