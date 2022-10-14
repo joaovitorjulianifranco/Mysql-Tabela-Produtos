@@ -31,22 +31,22 @@ insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) 
 
 select sum(Preço) as "Total Preço" from tb_produtos;
 	
-select sum(Preço) from tb_produtos;
+select sum(Preço) from tb_pedidos;
 
-select avg(Preço) from tb_produtos;
+select avg(Preço) from tb_pedidos;
 
-select max(Preço) from tb_produtos; 
+select max(Preço) from tb_pedidos; 
 
-select count(Quantidade*Preço) from tb_produtos; 
+select count(Quantidade*Preço) from tb_pedidos; 
 
-select sum(Quantidade * Preço) from tb_produtos where Preço;
+select sum(Quantidade * Preço) from tb_pedidos where Preço;
 
-select sum(Quantidade * Preço) from tb_produtos where Preço;
+select sum(Quantidade * Preço) from tb_pedidos where Preço;
 
 select * from tb_pedido; 
 
 select Nome_Produto, format(Preço, 4) 
-	from tb_pedido 
+	from tb_pedidos 
     where Preço > 150;
 
-select distinct Quantidade from tb_pedido; 
+select distinct Quantidade from tb_pedidos; 
