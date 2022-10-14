@@ -1,27 +1,33 @@
-create database produto; 
+create database Produtos;
 
-create table Tb_Produtos (
+create table Tb_Pedido(
 Nome_Produto varchar(30) not null,
-Id_Pedido int,
+Id_pedido int,
 Id_Produto int, 
 Preço float,
 Quantidade float
 );
 
-select * from tb_produtos;
+drop table tb_pedido;
 
-insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa de Vídeo MSI NVIDIA GeForce RTX 2060', '73497142', '2222234', '1600.99', '78');
-insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('GTX 1050 2GB, GDDR5, Gigabyte', '78487182', '2728234', '720.80', '40');
-insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('SSD 480 GB Kingston', '68586193', '3679271', '225.20', '49'); 
-insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe MSI PRO B660M-A, LGA 1700', '79787193', '4779221', '899.50', '8');
-insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Processador Intel Core i9-12900KS, 3.4GHz ', '78384199', '7499527', '4450.99', '28');
-insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Processador Intel Core i9-13900K, 13ª Geração, 5.8GHz Max Turbo', '98989197', '7348526', '4700.99', '30');
+select *from tb_pedido; 
+
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa de Vídeo MSI NVIDIA GeForce RTX 2060', '73497142', '2222234', '1600', '78');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('GTX 1050 2GB, GDDR5, Gigabyte', '78487182', '2728234', '720', '40');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('SSD 480 GB Kingston', '68586193', '3679271', '225', '49'); 
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe MSI PRO B660M-A, LGA 1700', '79787193', '4779221', '899', '8'); 
 insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe Msi A320m Pro-m2 V2 Socket Am4', '78767223', '4789421', '534.57', '20');
 insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe B360m Pro-vh Msi 1151', '77797224', '4779633', '1300', '20');
 insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Kit Upgrade, Processador Amd Ryzen 5 4600g, Placa Mãe Msi A320m-a Pro Max, Memória 8GB DDR4', '78898278', '4789838', '1927.19', '30');
 insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Kit Upgrade, Processador Ryzen 5 4600g, Placa Mãe Msi A320m-a Pro Max, Memória 8GB DDR4, SSD 256GB', '98798979', '9789898', '2358.38', '30');
-
-drop table tb_produtos; 
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Processador AMD Ryzen 7 5800X, 3.8GHz ', '17791519', '1769896', '1900.99', '75');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('SSD 240 GB Kingston A400, SATA, Leitura: 500MB', '18748474', '17859595', '142.99', '269');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Teclado Mecânico Gamer HyperX Alloy MKW100, RGB', '18191911', '17198191', '269.99', '990');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('HD Seagate 1TB BarraCuda, 3.5, SATA', '98798979', '8789797', '239.99', '66');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('HD 8TB Seagate NAS IronWolf, Sata 3, 7200RPM, Cache 256MB', '974794974', '9749494', '1720.90', '40');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('HD Disco Rígido Seagate Barracuda 1Tb 7200rpm', '977798974', '0789798', '282.51', '330');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('HD Seagate 2TB BarraCuda, 3.5, SATA', '58595975', '5759856', '339.99', '55');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('HD para Desktop Seagate Barracuda, 3.5", 2TB, Sata III', '78897949', '4759498', '370.80', '30');
 
 select sum(Preço) as "Total Preço" from tb_produtos;
 	
@@ -33,8 +39,14 @@ select max(Preço) from tb_produtos;
 
 select count(Quantidade*Preço) from tb_produtos; 
 
-select sum(Quantidade * Preço) from tb_produtos where Preço; 
+select sum(Quantidade * Preço) from tb_produtos where Preço;
+
+select sum(Quantidade * Preço) from tb_produtos where Preço;
+
+select * from tb_pedido; 
 
 select Nome_Produto, format(Preço, 4) 
 	from tb_pedido 
     where Preço > 150;
+
+select distinct Quantidade from tb_pedido; 
