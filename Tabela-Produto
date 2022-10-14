@@ -16,6 +16,9 @@ insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade
 insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe MSI PRO B660M-A, LGA 1700', '79787193', '4779221', '899.50', '8');
 insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Processador Intel Core i9-12900KS, 3.4GHz ', '78384199', '7499527', '4450.99', '28');
 insert into Tb_Produtos (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Processador Intel Core i9-13900K, 13ª Geração, 5.8GHz Max Turbo', '98989197', '7348526', '4700.99', '30');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe Msi A320m Pro-m2 V2 Socket Am4', '78767223', '4789421', '534.57', '20');
+insert into tb_pedido (Nome_Produto, Id_pedido, Id_Produto, Preço, Quantidade) values ('Placa Mãe B360m Pro-vh Msi 1151', '77797224', '4779633', '1300', '20');
+
 
 drop table tb_produtos; 
 
