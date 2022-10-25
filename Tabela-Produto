@@ -103,3 +103,5 @@ select Nome_Produto, format(Preço, 4)
 select distinct Quantidade from tb_produtos; 
 
 alter table tb_produtos add Quantidade_Pedidos int(20);
+
+select AVG(DISTINCT Preço * Quantidade_Pedidos) from tb_produtos;
