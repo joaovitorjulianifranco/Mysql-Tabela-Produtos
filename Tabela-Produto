@@ -65,7 +65,6 @@ update tb_produtos set Responsavel = 'Rafael', E_Mail = 'rafael.carl11@hotmail.c
 update tb_produtos set Responsavel = 'Marcela', E_Mail = 'marcelagt334@gmail.com', DDD = '18', Tel = '', Cel = '976435970', Endereço = 'R Sete de Setembro', Bairro = 'Vila Ocidental', Cidade = 'Presidente Prudente', Uf = 'SP', Cep = '19015250' where Id = '17';
 update tb_produtos set Responsavel = 'Marcelo', E_Mail = 'marceloct99@gmail.com', DDD = '18', Tel = '', Cel = '986837908', Endereço = 'Av Washington Luiz', Bairro = 'Vila Geni', Cidade = 'Presidente Prudente', Uf = 'SP', Cep = '19023540' where Id = '18';
 update tb_produtos set Responsavel = 'Daniela', E_Mail = 'daniela.teste07@gmail.br',  DDD = '14', Cel = '997365771', Data_Pedido = '2022-10-24', Endereço = 'R sete de Setembro', Bairro = 'Centro', Cidade = 'Bauru', Uf = 'SP', Cep = '17015030' where Id = '5';
-update tb_produtos set Data_Pedido = '2022-09-26' where Id = 
 update tb_produtos set Data_Pedido = '2022-09-26', Bairro = 'Centro' where Id = '4';
 update tb_produtos set Data_Pedido = '2022-08-10' where Id = '6';
 update tb_produtos set Data_Pedido = '2022-07-07' where Id = '7';
