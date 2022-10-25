@@ -80,6 +80,7 @@ update tb_produtos set Data_Pedido = '2022-09-29' where Id = '16';
 update tb_produtos set Data_Pedido = '2022-05-01' where Id = '17';
 update tb_produtos set Data_Pedido = '2022-03-27' where Id = '18';
 
+select date_format('2022-10-20', '%d/%m/%Y');
 
 drop table tb_produtos; 
 
