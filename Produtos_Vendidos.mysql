@@ -26,7 +26,6 @@ DELIMITER ;
 alter table produtos_vendidos add column Horario time;
 alter table produtos_vendidos add column Preço double not null after Produto;
 
-
 select * from produtos_vendidos;
 
 drop table produtos_vendidos;
@@ -35,3 +34,15 @@ insert into produtos_vendidos set Id = '1', produto = 'Smart TV LED 75 4K UHD sa
 update produtos_vendidos set Preço = '5890.00' where Id = '1';
 insert into produtos_vendidos set Id = '2', produto = 'Maleta de ferramentas kit com 129', Preço = '81.99', Quantidade_Vendidos = '50', Mes = '10', Ano_Retirado = '2022', Horario = '17:08:00';
 insert into produtos_vendidos set Id = '3', produto = 'Samsung Galaxy A22 Branco 128 GB', Preço = '1100.00', Quantidade_Vendidos = '100', Mes = '05', Ano_Retirado = '2022', Horario = '17:15:20';
+
+alter table produtos_vendidos add column Desconto float not null after Preço;
+
+update produtos_vendidos set Desconto = '5' where Id = '1';
+update produtos_vendidos set Desconto = '1' where Id = '2';
+update produtos_vendidos set Desconto = '2' where Id = '3';
+
+alter table produtos_vendidos add column Total_Pagar int;
+alter table produtos_vendidos add column Total_Pagar int after Quantidade_Vendidos; 
+
+select sum(Preço / 5) from produtos_vendidos;
+SELECT SUM(Preço) FROM produtos_vendidos GROUP BY Produto;
